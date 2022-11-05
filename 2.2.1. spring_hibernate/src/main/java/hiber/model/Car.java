@@ -15,10 +15,6 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
-    private User user;
-
     @Override
     public String toString() {
         return "Car{" +
@@ -26,15 +22,6 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", series=" + series +
                 '}';
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public User setUser(User user) {
-        this.user = user;
-        return user;
     }
 
     public Car() {

@@ -20,7 +20,8 @@ public class MainApp {
       User user1 = new User("Alex", "Navalniy", "freedom@ru");
       Car car1 = new Car("Lamba2", 2022);
 
-      //userService.add(user1.setCar(car1).setUser(user1));
+      user1.setCar(car1);
+      userService.add(user1);
 
 
       for (User user : userService.listUsers()) {
